@@ -26,13 +26,13 @@ install:
   - stack --no-terminal --version
   - stack install happy
   - stack install alex
-  # backend
-  - stack install yesod-bin
-  # test suite
-  - stack install hspec-discover
-  # database
-  - echo "CREATE USER moot WITH PASSWORD 'moot';" | psql postgres
-  - createdb -O moot moot
+  # # backend
+  # - stack install yesod-bin
+  # # test suite
+  # - stack install hspec-discover
+  # # database
+  # - echo "CREATE USER moot WITH PASSWORD 'moot';" | psql postgres
+  # - createdb -O moot moot
 
 # build frontend
 before_script:
@@ -43,8 +43,8 @@ before_script:
 script:
   - stack setup
   - stack update
-  - stack build --fast -j1
-  - stack test --fast
+  # - stack build --fast -j1
+  # - stack test --fast
 
 cache:
   timeout: 6000
