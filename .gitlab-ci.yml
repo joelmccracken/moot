@@ -14,7 +14,8 @@ cache:
 build:
   stage: build
   script:
-    - echo USER -- $USER
+    - echo "USER $USER"
+    - env
     # - make frontend-deps build
     # - echo PWD
     # - pwd
