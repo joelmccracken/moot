@@ -15,5 +15,3 @@ build:
   stage: build
   script: |
         make frontend-deps build
-  tags:
-    - moot
