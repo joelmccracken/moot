@@ -9,15 +9,16 @@ cache:
   paths:
     - node_modules/
     - .stack-work/
-    - /root/.stack/
+    - "/builds/${USER}/.stack/"
 
 build:
   stage: build
-  script: |
-        make frontend-deps build
-        echo PWD
-        pwd
-        echo LS ROOT
-        ls -a /root/
-        echo LS here
-        ls -a ./
+  script:
+    - echo USER -- $USER
+    # - make frontend-deps build
+    # - echo PWD
+    # - pwd
+    # - echo LS ROOT
+    # - ls -a /root/
+    # - echo LS here
+    # - ls -a ./
