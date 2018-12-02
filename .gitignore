@@ -29,7 +29,7 @@ yesod-devel/
 ghcid.txt
 static/css
 static/js
-
+.ghc/
 # files for docker development setup
 .stack/
 .bash_history
