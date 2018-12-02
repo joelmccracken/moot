@@ -1,0 +1,25 @@
+image: registry.gitlab.com/lorepub/moot/moot-build-image:latest
+
+stages:
+  - build
+
+cache:
+  key: global-cache
+  # key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .stack-work/
+    - /root/.stack/
+    - /root/.npm/
+    - /root/.local/
+
+build:
+  stage: build
+  script:
+    - make frontend-deps build
+    - echo PWD
+    - pwd
+    - echo LS ROOT
+    - ls -a /root/
+    - echo LS here
+    - ls -a ./
